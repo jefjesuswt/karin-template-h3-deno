@@ -8,8 +8,8 @@
     "start": "bun run src/main.ts"
   },
   "dependencies": {
-    "@karin-js/core": "^0.2.0",
-    "@karin-js/platform-h3": "^0.1.0",
+    "@karin-js/core": "^0.5.2",
+    "@karin-js/platform-h3": "^0.2.6",
     "zod": "^3.24.1"
   },
   "devDependencies": {

@@ -1,14 +1,19 @@
 import { KarinFactory } from "@karin-js/core";
 import { H3Adapter } from "@karin-js/platform-h3";
 
-async function bootstrap() {
-  const app = await KarinFactory.create(new H3Adapter(), {
-    scan: "./src/**/*.controller.ts",
-  });
+const app = await KarinFactory.create(new H3Adapter(), {
+  scan: "./src/**/*.controller.ts",
+});
 
-  app.listen(3000, () => {
-    console.log("🚀 Server running on http://localhost:3000");
-  });
+await app.init();
+
+const fetch = (app.getHttpAdapter() as any).fetch;
+
+// Support for Deno Deploy
+// @ts-ignore
+if (typeof Deno !== "undefined" && typeof Deno.serve === "function") {
+  // @ts-ignore
+  Deno.serve(fetch);
 }
 
-bootstrap();
+export default { fetch };
