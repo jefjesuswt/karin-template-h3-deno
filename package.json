@@ -1,15 +1,15 @@
 {
   "name": "karin-h3-starter",
   "version": "0.0.1",
-  "description": "Starter template for Karin-JS with H3",
+  "description": "Starter template for Karin with H3",
   "type": "module",
   "scripts": {
     "dev": "bun run --watch src/main.ts",
     "start": "bun run src/main.ts"
   },
   "dependencies": {
-    "@karin-js/core": "^0.5.2",
-    "@karin-js/platform-h3": "^0.2.6",
+    "@project-karin/core": "^0.5.2",
+    "@project-karin/platform-h3": "^0.2.6",
     "zod": "^4.1.13"
   },
   "devDependencies": {
