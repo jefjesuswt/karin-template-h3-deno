@@ -1,4 +1,4 @@
-import { Controller, Get } from "@karin-js/core";
+import { Controller, Get } from "@project-karin/core";
 
 @Controller("/")
 export class AppController {

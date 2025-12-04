@@ -16,5 +16,5 @@
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false
   },
-  "include": ["src/**/*", "node_modules/@karin-js/**/*"]
+  "include": ["src/**/*", "node_modules/@project-karin/**/*"]
 }
